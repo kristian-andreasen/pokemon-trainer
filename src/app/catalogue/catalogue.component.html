@@ -1,7 +1,12 @@
-<p>catalogue works!</p>
+<h1>Catalogue</h1>
 
 <main>
   <ul>
-    <li></li>
+    <li *ngFor="let pokemon of pokemons">
+      {{ pokemon.name }}
+      <img [src]="getPokemonImageUrl(pokemon.url)" alt="{{ pokemon.name }}" />
+      <button>Add</button>
+    </li>
   </ul>
+
 </main>
