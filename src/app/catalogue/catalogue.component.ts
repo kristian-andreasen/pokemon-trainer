@@ -1,5 +1,10 @@
+//import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { PokemonCatalogueService } from '../services/pokemon-catalogue.service';
+//import { map } from 'rxjs/operators';
+import { Pokemon } from 'src/models/pokemon.model';
+import { StorageUtil } from 'src/utils/storage.utils';
+//import { ResponseData } from 'src/models/responseData.model';
 
 @Component({
   selector: 'app-catalogue',
@@ -7,13 +12,23 @@ import { PokemonCatalogueService } from '../services/pokemon-catalogue.service';
   styleUrls: ['./catalogue.component.css'],
 })
 export class CatalogueComponent {
-  constructor(private pokemonCatalogueService: PokemonCatalogueService) {}
+  // Define a property named "pokemons" with type "Pokemon[]"
+  pokemons: Pokemon[] = [];
 
-  //"ngOnInit" lifecycle hook
+  constructor(private pokemonCatalogueService: PokemonCatalogueService) {}
+  // New public method
+  getPokemonImageUrl(url: string): string {
+    // Extract the Pokemon's ID from the URL
+    const id = this.pokemonCatalogueService.extractID(url);
+    // Return the URL of the Pokemon's image
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+  }
+
   ngOnInit() {
-    // Subscribe to the observable returned by the 'fetchPokemin' method
-    this.pokemonCatalogueService.fetchPokemons().subscribe((data) => {
-      console.log(data.results);
+    this.pokemonCatalogueService.fetchPokemons().subscribe((pokemons) => {
+      this.pokemons = pokemons;
+      //console.log(pokemons);
+      StorageUtil.storageSave('pokemons', pokemons);
     });
   }
 }
