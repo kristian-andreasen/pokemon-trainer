@@ -15,6 +15,7 @@ export class UserService {
   }
 
   set user(user: User | undefined) {
+    StorageUtil.storageSave<User>(StorageKeys.User, user!)
     this._user = user;
   }
 

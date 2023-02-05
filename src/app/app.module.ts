@@ -10,11 +10,12 @@ import { LoginComponent } from './login/login.component';
 import { TrainerComponent } from './trainer/trainer.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, TrainerComponent, CatalogueComponent],
+  declarations: [AppComponent, LoginComponent, TrainerComponent, CatalogueComponent, NavbarComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
