@@ -1,6 +1,9 @@
 <div *ngIf="pokemons">
-    <ul *ngFor="let pokemon of pokemons">
-        <img [src]="getPokemonImageUrl(pokemon.url)" alt="{{pokemon.name}}">
-        <li>{{ pokemon.name }}</li>
-    </ul>
+  <ul *ngFor="let pokemon of pokemons">
+    <li>
+      {{ pokemon.name }}
+      <img [src]="getPokemonImageUrl(pokemon.url)" alt="{{ pokemon.name }}" />
+      <button>Remove</button>
+    </li>
+  </ul>
 </div>
