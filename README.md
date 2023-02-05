@@ -9,7 +9,7 @@
 - [ ] "trainer" page should list the Pokémon that the trainer has collected
 - [ ] user is able to remove a Pokémon from their collection on "trainer page
 - [X] the "catalogue" page lists the Pokémon name and avatar
-- [ ] the "add" button on each Pokémon, adds the Pokémon to the trainer’s collection, and updates the Trainer API
+- [X] the "add" button on each Pokémon, adds the Pokémon to the trainer’s collection, and updates the Trainer API
 - [ ] visually indicate that this Pokémon has been collected
 - [ ] add styling
 
