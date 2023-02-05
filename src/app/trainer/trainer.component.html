@@ -3,7 +3,7 @@
     <li>
       {{ pokemon.name }}
       <img [src]="getPokemonImageUrl(pokemon.url)" alt="{{ pokemon.name }}" />
-      <button>Remove</button>
+      <button (click)="removePokemon(pokemon)">Remove</button>
     </li>
   </ul>
 </div>
