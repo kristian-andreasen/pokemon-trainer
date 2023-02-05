@@ -1,4 +1,9 @@
+import { User } from "src/models/user.model";
+
 export class StorageUtil {
+  public static storageWrite(arg0: string, user: User) {
+    throw new Error('Method not implemented.');
+  }
   // Function to save data to session storage
   public static storageSave<T>(key: string, value: T): void {
     // Set the item in session storage with the key and stringified value
