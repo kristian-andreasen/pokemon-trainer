@@ -1,12 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, of, switchMap, tap } from 'rxjs';
-//import { environment } from 'src/environments/environment';
-import { User } from 'src/models/user.model';
-//import { StorageUtil } from 'src/utils/storage.utils';
-//import { StorageKeys } from '../enums/storage-keys.enum';
 
-//const {apiTrainers, apikey} = environment;
+import { User } from 'src/models/user.model';
 
 @Injectable({
   providedIn: 'root',

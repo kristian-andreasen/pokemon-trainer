@@ -5,7 +5,7 @@
     <li *ngFor="let pokemon of pokemons">
       {{ pokemon.name }}
       <img [src]="getPokemonImageUrl(pokemon.url)" alt="{{ pokemon.name }}" />
-      <button>Add</button>
+      <button (click)="addPokemon(pokemon)">Add</button>
     </li>
   </ul>
 
