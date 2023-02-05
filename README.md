@@ -1,5 +1,18 @@
 # PokemonTrainer
 
+### Tasks
+- [X] existing user login
+- [x] create new user and saving to Trainer API
+- [x] save user in sessionStorage
+- [x] redirect user to "catalogue" page after sign-in
+- [X] user is not able to see "catalogue" page before signing-in
+- [ ] "trainer" page should list the Pokémon that the trainer has collected
+- [ ] user is able to remove a Pokémon from their collection on "trainer page
+- [X] the "catalogue" page lists the Pokémon name and avatar
+- [ ] the "add" button on each Pokémon, adds the Pokémon to the trainer’s collection, and updates the Trainer API
+- [ ] visually indicate that this Pokémon has been collected
+- [ ] add styling
+
 ### Getting started
 - Fork the repository on GitHub.
 - Clone or download your fork to your local machine.
