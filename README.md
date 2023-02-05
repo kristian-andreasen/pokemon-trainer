@@ -7,7 +7,7 @@
 - [x] redirect user to "catalogue" page after sign-in
 - [X] user is not able to see "catalogue" page before signing-in
 - [X] "trainer" page should list the name and image of collected Pokémon
-- [ ] user is able to remove a Pokémon from their collection on "trainer page
+- [X] user is able to remove a Pokémon from their collection on "trainer page
 - [X] the "catalogue" page lists the Pokémon name and avatar
 - [X] the "add" button on each Pokémon, adds the Pokémon to the trainer’s collection, and updates the Trainer API
 - [X] visually indicate that this Pokémon has been collected
