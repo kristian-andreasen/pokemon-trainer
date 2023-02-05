@@ -1,12 +1,21 @@
 <h1>Catalogue</h1>
-
 <main>
   <ul>
+    <!-- Use the "ngFor" directive to repeat the following "li" element for each "pokemon" in the "pokemons" array -->
     <li *ngFor="let pokemon of pokemons">
+      <!-- Display the "name" property of the "pokemon" object -->
       {{ pokemon.name }}
+
+      <!-- Display the image of the "pokemon" using the "getPokemonImageUrl()" method -->
       <img [src]="getPokemonImageUrl(pokemon.url)" alt="{{ pokemon.name }}" />
-      <button (click)="addPokemon(pokemon)">Add</button>
+
+      <!-- Display a checkmark symbol if the "pokemon" is in the user's pokemon list -->
+      <span *ngIf="userService.user && userService.user.pokemon.includes(pokemon.name)">
+        &#10003;
+      </span>
+
+      <!-- Display the "Add" button if the "pokemon" is not in the user's pokemon list or the user is not logged in -->
+      <button (click)="addPokemon(pokemon)" *ngIf="!userService.user || !userService.user.pokemon.includes(pokemon.name)">Add</button>
     </li>
   </ul>
-
 </main>

@@ -20,7 +20,7 @@ export class CatalogueComponent {
 
   constructor(
     private pokemonCatalogueService: PokemonCatalogueService,
-    private userService: UserService,
+    public userService: UserService,
     private http: HttpClient
   ) {}
 
@@ -46,6 +46,7 @@ export class CatalogueComponent {
     if (this.userService.user && !this.userService.user.pokemon.includes(pokemon.name)) {
       // Add the pokemon to the user's pokemon list
       this.userService.user.pokemon.push(pokemon.name);
+
       // Set the headers for the API request
       const headers = new HttpHeaders({
         'content-type': 'application/json',
