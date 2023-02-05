@@ -38,19 +38,12 @@ export class PokemonCatalogueService {
       return of(storedData);
     }
 
-    return this.http
-      .get<ResponseData>(
-        `${this.BASE_URL}/pokemon?limit=${this.MAX_SAFE_INTEGER}`
-      )
-      .pipe(
-        map((data) => data.results),
+    return this.http.get<ResponseData>(`${this.BASE_URL}/pokemon?limit=${this.MAX_SAFE_INTEGER}`)
+      .pipe(map((data) => data.results),
         tap((data) => {
           this._pokemons = data;
           StorageUtil.storageSave('pokemons', data);
         })
       );
-  }
-  public findPokemonByName(name: string): Pokemon | undefined {
-    return this.pokemons.find((pokemon: Pokemon) => pokemon.name === name);
   }
 }
