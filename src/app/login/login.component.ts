@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { pipe } from 'rxjs';
 import { User } from 'src/models/user.model';
 import { LoginService } from '../services/login.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent {
 
   constructor(
     private readonly router: Router,
-    private readonly loginService: LoginService) { }
+    private readonly loginService: LoginService,
+    private readonly userService: UserService) { }
 
   public loginSubmit(loginForm: NgForm): void {
 
@@ -26,6 +28,7 @@ export class LoginComponent {
     this.loginService.login(username)
       .subscribe({
         next: (user: User | undefined) => {
+          this.userService.user = user;
           this.router.navigateByUrl("/catalogue")
 
         },
