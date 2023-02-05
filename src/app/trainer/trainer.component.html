@@ -1,6 +1,6 @@
 <div *ngIf="pokemons">
     <ul *ngFor="let pokemon of pokemons">
-        <img src="{{pokemon.url}}" alt="{{pokemon.name}}">
+        <img [src]="getPokemonImageUrl(pokemon.url)" alt="{{pokemon.name}}">
         <li>{{ pokemon.name }}</li>
     </ul>
 </div>
