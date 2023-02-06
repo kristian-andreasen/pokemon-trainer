@@ -1,9 +1,12 @@
-<div *ngIf="pokemons">
-  <ul *ngFor="let pokemon of pokemons">
-    <li>
-      {{ pokemon.name }}
-      <img [src]="getPokemonImageUrl(pokemon.url)" alt="{{ pokemon.name }}" />
-      <button (click)="removePokemon(pokemon)">Remove</button>
-    </li>
-  </ul>
-</div>
+<h1>Profile</h1>
+<main>
+  <div *ngIf="pokemons">
+    <ul *ngFor="let pokemon of pokemons">
+      <li>
+        {{ pokemon.name }}
+        <img [src]="getPokemonImageUrl(pokemon.url)" alt="{{ pokemon.name }}" />
+        <button (click)="removePokemon(pokemon)">Remove</button>
+      </li>
+    </ul>
+  </div>
+</main>
