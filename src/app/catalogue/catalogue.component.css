@@ -7,3 +7,18 @@ ul li {
   display: flex;
   align-items: center;
 }
+h1 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  text-align: center;
+  display: list-item;
+  justify-content: center;
+}
+
+
+
+
