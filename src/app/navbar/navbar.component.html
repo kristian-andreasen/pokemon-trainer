@@ -1,14 +1,18 @@
 <header>
-  <nav>
-    <ng-container *ngIf="user !== undefined">
-      <ul>
-        <li>
-          <a routerLink="/trainer">Trainer</a>
-        </li>
-        <li>
-          <a routerLink="/catalogue">Pokémon Catalogue</a>
-        </li>
-      </ul>
-    </ng-container>
-  </nav>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png?20150121202211" alt="" width="150" height="100" class="logo">
+    <nav>
+      <ng-container *ngIf="user !== undefined">
+        <ul>
+          <li>
+            <a routerLink="/trainer">Profile</a>
+          </li>
+          <li>
+            <a routerLink="/catalogue">Catalogue</a>
+          </li>
+        </ul>
+      </ng-container>
+    </nav>
+  </div>
 </header>
+<hr>
