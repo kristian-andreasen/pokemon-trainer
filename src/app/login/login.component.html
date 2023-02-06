@@ -1,16 +1,18 @@
-<p>login works!</p>
 
 <main>
   <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
     <fieldset>
-      <label for="username">username</label>
+      <label for="username">Username</label>
       <input type="text"
       ngModel
       #username="ngModel"
       name="username"
       id="username" />
+      <button type="submit">Login</button>
+      
     </fieldset>
-
-    <button type="submit">Login</button>
+    <img src="https://i1.sndcdn.com/artworks-000486422298-59qj4y-t500x500.jpg" alt="pikachu">
   </form>
 </main>
+
+
